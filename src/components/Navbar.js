@@ -1,10 +1,15 @@
-import React from 'react'
+import React  from 'react'
 import PropTypes from 'prop-types'
 export default function Navbar(hiii) {
+
+    
+    
+
   return (
-      <nav className="navbar navbar-expand-lg bg-light">
+  <>
+      <nav className="navbar navbar-expand-lg  bg-secondary  ">
           <div className="container-fluid">
-              <a className="navbar-brand" href="/">{hiii.title}</a>
+              <a className="navbar-brand text-white"  href="/">{hiii.title}</a>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span className="navbar-toggler-icon"></span>
               </button>
@@ -32,15 +37,18 @@ export default function Navbar(hiii) {
                       </li>
                   </ul>
                   <form className="d-flex" role="search">
-                      <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                      <button className="btn btn-outline-success" type="submit">Search</button>
+                      <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"  />
+                      <button className="btn btn-outline-dark"  >Search</button>
                   </form>
               </div>
           </div>
 
       </nav>
+      </>
   )
 }
+
+
 
 // this we do because in future if by mistake we write the name as  number or any object then we get error 
 Navbar.propTypes = {
