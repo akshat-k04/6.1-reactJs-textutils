@@ -1,6 +1,5 @@
 import React , {useState} from 'react'
 let ini = true;
-let text = "";
 
 export default function TextForm(hello) {
     const wordchanger = (event) => {
@@ -62,13 +61,13 @@ export default function TextForm(hello) {
          <h1>{hello.line}</h1>
          <textarea className="form-control" id="myBox" rows="8" value={text} onChange={handleOnChange} onClick={clickText}></textarea>
         </div>
-        <button className='btn btn-primary mx-1' onClick={handleUpClick}>convert to upercase</button>
-        <button className='btn btn-primary mx-1' onClick={handleLowClick}>convert to lowercase</button>
-        <button className='btn btn-primary mx-1' onClick={textClear}>clear text</button>
+        <button className='btn btn-dark mx-1' onClick={handleUpClick}>convert to upercase</button>
+        <button className='btn btn-dark mx-1' onClick={handleLowClick}>convert to lowercase</button>
+        <button className='btn btn-dark mx-1' onClick={textClear}>clear text</button>
         <div className="input-group flex-nowrap">
           <input type="text" onChange={wordchanger} className="form-control" placeholder="word" aria-label="Username" aria-describedby="addon-wrapping" value = {word}/>
         </div>
-        <button className='btn btn-primary mx-1' onClick={finder}>word finder</button>
+        <button className='btn btn-dark mx-1' onClick={finder}>word finder</button>
 
 
       </div>
