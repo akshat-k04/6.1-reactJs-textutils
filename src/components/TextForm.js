@@ -79,7 +79,7 @@ export default function TextForm(hello) {
         <p>there are {text.split(" ").length} words and {text.length} character in your text </p>
         <p> you need {0.008 * text.split(" ").length }  minutes to read this text </p>
         <h2>preview</h2>
-        <p>{text}</p>
+        <p>{text.length>0 ?text :"please enter some text"}</p>
       </div>
     </>
   )

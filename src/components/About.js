@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function About() {
+export default function About(hello) {
 
     const [myStyle,setMyStyle] = useState({
         color : 'black' ,
@@ -12,35 +12,39 @@ export default function About() {
         backgroundColor: 'gray'
     })
 
+    setMyStyle( document.body.style.backgroundColor === 'white' ? {color:'white',backgroundColor:'gray'}:{color:'black',backgroundColor:'white'});
 
-    const toggleStyle=()=>{
-        if(myStyle.color=== 'black'){
-            setMyStyle({
-                color: 'white',
-                backgroundColor: 'gray',
+     const to =()=> {
+        
+     }
+    // const toggleStyle=()=>{
+    //     if(myStyle.color==='black'){
+    //         setMyStyle({
+    //             color: 'white',
+    //             backgroundColor: 'gray',
                 
-            });
-            setouterstyle({
-                color: 'white',
-                backgroundColor: 'black',
+    //         });
+    //         setouterstyle({
+    //             color: 'white',
+    //             backgroundColor: 'black',
                 
-            })
-            changer('enable light mode');
+    //         })
+    //         changer('enable light mode');
 
-        }
-        else {
-            setMyStyle({
-                color: 'black',
-                backgroundColor: 'white',
-            });
-            setouterstyle({
-                color: 'black',
-                backgroundColor: 'gray'
-            })
-            changer('enable dark mode');
+    //     }
+    //     else {
+    //         setMyStyle({
+    //             color: 'black',
+    //             backgroundColor: 'white',
+    //         });
+    //         setouterstyle({
+    //             color: 'black',
+    //             backgroundColor: 'gray'
+    //         })
+    //         changer('enable dark mode');
 
-        }
-    }
+    //     }
+    // }
 
     const [btton , changer] = useState('enable dark made');
     
@@ -97,7 +101,7 @@ export default function About() {
                   </div>
               </div>
           </div>
-          <button type="button" className="btn btn-dark mx-3 my-3" onClick={toggleStyle}>{btton}</button>
+          <button type="button" className="btn btn-dark mx-3 my-3" onClick={to}>{btton}</button>
     </div>
   )
 }
