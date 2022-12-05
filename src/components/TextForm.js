@@ -1,6 +1,6 @@
 import React , {useState} from 'react'
 let ini = true;
-
+let previous=" " ,currenter=" ",counter=0 ;
 export default function TextForm(hello) {
     const wordchanger = (event) => {
         worset(event.target.value); // this will change the value of text just similar as setText(" value of text is changed ")
@@ -19,6 +19,13 @@ export default function TextForm(hello) {
     const handleOnChange = (event)=> {
         
         setText(event.target.value); // this will change the value of text just similar as setText(" value of text is changed ")
+        previous = currenter ;
+        let tryer = event.target.value ;
+      currenter = tryer.charAt(tryer.length -1);
+      if(previous===" " && currenter!==" "){
+        counter++ ;
+      }
+
 
     }
     const textClear = () => {
@@ -51,9 +58,10 @@ export default function TextForm(hello) {
         }
     }
     
-    const [text, setText] = useState('enter your text');
+    const [text, setText] = useState('');
     const [word, worset] = useState('') ;
     const [val , vlaer] = useState('') ;
+    //const [counter,updatecounter] = useState(0);
   return (
     <>
       <div className="container">
@@ -76,7 +84,7 @@ export default function TextForm(hello) {
       <div className="container">
         <p > {val}</p>
         <h1>your text summary</h1>
-        <p>there are {text.split(" ").length} words and {text.length} character in your text </p>
+        <p>there are {counter} words and {text.length} character in your text </p>
         <p> you need {0.008 * text.split(" ").length }  minutes to read this text </p>
         <h2>preview</h2>
         <p>{text.length>0 ?text :"please enter some text"}</p>
