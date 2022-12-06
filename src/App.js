@@ -43,7 +43,7 @@ function App() {
   return (
     <>
     <Router>
-    <Navbar title="company name" aboutText="company about" mode={mode} textMode={modet} toggle={toggleIt}/>
+    <Navbar title="timepass" aboutText="about" mode={mode} textMode={modet} toggle={toggleIt}/>
 
         <div className='container my-3'>
 
