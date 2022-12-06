@@ -17,6 +17,7 @@ function App() {
       setAbout(false);
       setalrt('dark')
       document.body.style.backgroundColor='gray';
+      document.title = 'textutils- dark mode';
     }
     else{
       setTmode ("dark");
@@ -24,6 +25,8 @@ function App() {
       setalrt('light')
       setAbout(true);
       document.body.style.backgroundColor = 'white';
+      document.title = 'textutils- light mode';
+
 
     }
   }
